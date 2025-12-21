@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: gin_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: gin_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - gin_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Gin Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gin_app
+    ports:
+      - "8080:8080"
+    environment:
+      APP_NAME: gin-quickstart
+      APP_ENV: development
+      APP_PORT: 8080
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: gin_db
+      JWT_SECRET: your-secret-key-change-this
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - gin_network
+    restart: unless-stopped
+
+  # pgAdmin (Optional - untuk manage database)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: gin_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    networks:
+      - gin_network
+    depends_on:
+      - postgres
+
+networks:
+  gin_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
