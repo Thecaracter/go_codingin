@@ -47,7 +47,6 @@ func (s *orderService) CreateOrder(userID, productID uint, quantity int) (*model
 		return nil, errors.New("quantity must be greater than 0")
 	}
 
-	// Get product
 	product, err := s.productRepo.GetByID(productID)
 	if err != nil {
 		return nil, errors.New("product not found")
@@ -57,7 +56,6 @@ func (s *orderService) CreateOrder(userID, productID uint, quantity int) (*model
 		return nil, errors.New("product is not available")
 	}
 
-	// Calculate total
 	var totalAmount float64
 	if product.DiscountPrice != nil && *product.DiscountPrice > 0 {
 		totalAmount = *product.DiscountPrice * float64(quantity)
@@ -65,10 +63,8 @@ func (s *orderService) CreateOrder(userID, productID uint, quantity int) (*model
 		totalAmount = product.Price * float64(quantity)
 	}
 
-	// Generate order number
 	orderNumber := fmt.Sprintf("ORD-%d-%d", time.Now().Unix(), userID)
 
-	// Create order
 	order := &models.Order{
 		OrderNumber:   orderNumber,
 		UserID:        userID,
@@ -85,7 +81,6 @@ func (s *orderService) CreateOrder(userID, productID uint, quantity int) (*model
 		return nil, err
 	}
 
-	// Create transaction record
 	transaction := &models.Transaction{
 		OrderID:       order.ID,
 		Amount:        totalAmount,
@@ -106,7 +101,6 @@ func (s *orderService) GetOrderByID(userID, orderID uint) (*models.Order, error)
 		return nil, errors.New("order not found")
 	}
 
-	// Verify ownership
 	if order.UserID != userID {
 		return nil, errors.New("unauthorized")
 	}
@@ -142,17 +136,14 @@ func (s *orderService) UploadPaymentProof(userID, orderID uint, file *multipart.
 		return errors.New("order not found")
 	}
 
-	// Verify ownership
 	if order.UserID != userID {
 		return errors.New("unauthorized")
 	}
 
-	// Check order status
 	if order.PaymentStatus != "pending" {
 		return errors.New("order is not pending payment")
 	}
 
-	// Upload file
 	filePath, err := utils.UploadFile(file, "payment_proofs")
 	if err != nil {
 		return err
@@ -165,10 +156,6 @@ func (s *orderService) UploadPaymentProof(userID, orderID uint, file *multipart.
 		return errors.New("transaction not found")
 	}
 
-	// Delete old proof if exists (stored in Metadata as JSON)
-	// In production, parse Metadata JSON properly
-
-	// Update transaction - store proof path in Metadata
 	transaction.Metadata = `{"proof_image":"` + filePath + `"}`
 	transaction.Status = "pending"
 
@@ -177,7 +164,6 @@ func (s *orderService) UploadPaymentProof(userID, orderID uint, file *multipart.
 		return err
 	}
 
-	// Update order status
 	order.Status = "processing"
 	order.PaymentStatus = "pending"
 	if err := s.orderRepo.Update(order); err != nil {

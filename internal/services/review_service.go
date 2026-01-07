@@ -35,18 +35,15 @@ func NewReviewService(
 }
 
 func (s *reviewService) CreateReview(userID, productID uint, rating int, comment string) error {
-	// Validate rating
 	if rating < 1 || rating > 5 {
 		return errors.New("rating harus antara 1-5")
 	}
 
-	// Check if product exists
 	_, err := s.productRepo.GetByID(productID)
 	if err != nil {
 		return errors.New("product tidak ditemukan")
 	}
 
-	// Check if user has purchased this product
 	hasPurchased, err := s.orderRepo.HasUserPurchasedProduct(userID, productID)
 	if err != nil {
 		return err
@@ -82,7 +79,6 @@ func (s *reviewService) GetUserReviews(userID uint) ([]*models.Review, error) {
 }
 
 func (s *reviewService) UpdateReview(reviewID, userID uint, rating int, comment string) error {
-	// Validate rating
 	if rating < 1 || rating > 5 {
 		return errors.New("rating harus antara 1-5")
 	}

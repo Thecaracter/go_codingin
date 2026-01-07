@@ -98,7 +98,6 @@ func (s *customOrderService) ProcessRequest(id uint, status, adminNotes string, 
 		return errors.New("custom order ini sudah selesai atau dibatalkan")
 	}
 
-	// Valid statuses: pending, reviewing, quoted, in_progress, completed, cancelled
 	validStatuses := map[string]bool{
 		"pending":     true,
 		"reviewing":   true,

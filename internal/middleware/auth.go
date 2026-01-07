@@ -18,7 +18,6 @@ func AuthMiddleware(cfg *config.Config) gin.HandlerFunc {
 			return
 		}
 
-		// Bearer token format
 		parts := strings.SplitN(authHeader, " ", 2)
 		if len(parts) != 2 || parts[0] != "Bearer" {
 			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid authorization format"})
@@ -34,7 +33,6 @@ func AuthMiddleware(cfg *config.Config) gin.HandlerFunc {
 			return
 		}
 
-		// Set user info in context
 		c.Set("user_id", claims.UserID)
 		c.Set("user_email", claims.Email)
 		c.Set("user_role", claims.Role)
@@ -56,7 +54,6 @@ func AdminMiddleware() gin.HandlerFunc {
 	}
 }
 
-// Helper function to get user ID from context
 func GetUserID(c *gin.Context) uint {
 	userID, exists := c.Get("user_id")
 	if !exists {
@@ -65,7 +62,6 @@ func GetUserID(c *gin.Context) uint {
 	return userID.(uint)
 }
 
-// Helper function to get user role from context
 func GetUserRole(c *gin.Context) string {
 	role, exists := c.Get("user_role")
 	if !exists {

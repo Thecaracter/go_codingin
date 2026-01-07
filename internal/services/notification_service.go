@@ -30,7 +30,6 @@ func (s *notificationService) CreateNotification(userID uint, notifType, title, 
 		return errors.New("title dan message harus diisi")
 	}
 
-	// Valid notification types
 	validTypes := map[string]bool{
 		"order":        true,
 		"payment":      true,

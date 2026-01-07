@@ -62,16 +62,13 @@ func NewProductService(productRepo repositories.ProductRepository, categoryRepo 
 }
 
 func (s *productService) CreateProduct(req CreateProductRequest, file *multipart.FileHeader, createdBy uint) (*models.Product, error) {
-	// Validate category exists
 	_, err := s.categoryRepo.GetByID(req.CategoryID)
 	if err != nil {
 		return nil, errors.New("category not found")
 	}
 
-	// Generate slug
 	slug := generateProductSlug(req.Title)
 
-	// Check if slug already exists
 	existing, _ := s.productRepo.GetBySlug(slug)
 	if existing != nil {
 		return nil, errors.New("product with this title already exists")
@@ -96,19 +93,16 @@ func (s *productService) CreateProduct(req CreateProductRequest, file *multipart
 	}
 
 	var imagePath string
-	// Upload image if provided (save to PreviewImages as single image for now)
 	if file != nil {
 		var err error
 		imagePath, err = utils.UploadFile(file, "products")
 		if err != nil {
 			return nil, err
 		}
-		// Store as JSON array with single image
 		product.PreviewImages = `["` + imagePath + `"]`
 	}
 
 	if err := s.productRepo.Create(product); err != nil {
-		// Delete uploaded file if product creation fails
 		if imagePath != "" {
 			utils.DeleteFile(imagePath)
 		}
@@ -151,7 +145,6 @@ func (s *productService) UpdateProduct(id uint, req UpdateProductRequest, file *
 		return nil, errors.New("product not found")
 	}
 
-	// Update fields
 	if req.Title != "" {
 		product.Title = req.Title
 		product.Slug = generateProductSlug(req.Title)
@@ -169,7 +162,6 @@ func (s *productService) UpdateProduct(id uint, req UpdateProductRequest, file *
 		product.DiscountPrice = req.DiscountPrice
 	}
 	if req.CategoryID > 0 {
-		// Validate category exists
 		_, err := s.categoryRepo.GetByID(req.CategoryID)
 		if err != nil {
 			return nil, errors.New("category not found")
@@ -182,9 +174,7 @@ func (s *productService) UpdateProduct(id uint, req UpdateProductRequest, file *
 
 	product.IsActive = req.IsActive
 
-	// Upload new image if provided
 	if file != nil {
-		// Delete old image if exists (extract from JSON)
 		if product.PreviewImages != "" {
 			// Simple deletion - in real app would parse JSON properly
 		}
@@ -209,9 +199,7 @@ func (s *productService) DeleteProduct(id uint) error {
 		return errors.New("product not found")
 	}
 
-	// Delete product images (parse JSON if needed)
 	if product.PreviewImages != "" {
-		// In real app, parse JSON and delete all images
 	}
 
 	return s.productRepo.Delete(id)
@@ -221,7 +209,6 @@ func (s *productService) GetFeaturedProducts(limit int) ([]models.Product, error
 	if limit < 1 {
 		limit = 10
 	}
-	// Since Product model doesn't have IsFeatured, return latest products
 	products, _, err := s.productRepo.GetAll(1, limit, nil, "")
 	return products, err
 }

@@ -27,7 +27,6 @@ func NewWishlistService(wishlistRepo repositories.WishlistRepository, productRep
 }
 
 func (s *wishlistService) AddToWishlist(userID, productID uint) (*models.Wishlist, error) {
-	// Check if product exists
 	product, err := s.productRepo.GetByID(productID)
 	if err != nil {
 		return nil, errors.New("product not found")
@@ -37,13 +36,11 @@ func (s *wishlistService) AddToWishlist(userID, productID uint) (*models.Wishlis
 		return nil, errors.New("product is not available")
 	}
 
-	// Check if already in wishlist
 	existing, err := s.wishlistRepo.GetByUserAndProduct(userID, productID)
 	if err == nil && existing != nil {
 		return nil, errors.New("product already in wishlist")
 	}
 
-	// Create wishlist item
 	wishlist := &models.Wishlist{
 		UserID:    userID,
 		ProductID: productID,
@@ -66,7 +63,6 @@ func (s *wishlistService) RemoveFromWishlist(userID, wishlistID uint) error {
 		return errors.New("wishlist item not found")
 	}
 
-	// Verify ownership
 	if wishlist.UserID != userID {
 		return errors.New("unauthorized")
 	}

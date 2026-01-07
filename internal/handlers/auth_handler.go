@@ -86,10 +86,8 @@ func (h *AuthHandler) GoogleLogin(c *gin.Context) {
 
 	config := utils.GetGoogleOAuthConfig(oauthConfig)
 
-	// Build URL manually untuk memastikan semua parameter ada
 	url := config.AuthCodeURL("state")
 
-	// Return URL dan juga redirect langsung
 	c.Redirect(http.StatusTemporaryRedirect, url)
 }
 

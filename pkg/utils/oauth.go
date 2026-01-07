@@ -98,7 +98,6 @@ func GetGithubUserInfo(ctx context.Context, code string, config *oauth2.Config) 
 
 	client := config.Client(ctx, token)
 
-	// Get user profile
 	resp, err := client.Get("https://api.github.com/user")
 	if err != nil {
 		return nil, err

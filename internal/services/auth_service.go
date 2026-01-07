@@ -32,13 +32,11 @@ func NewAuthService(repo repositories.UserRepository, config *config.Config) Aut
 }
 
 func (s *authService) Register(req *models.UserCreateRequest) (*models.AuthResponse, error) {
-	// Check if email exists
 	existingUser, _ := s.repo.FindByEmail(req.Email)
 	if existingUser != nil {
 		return nil, errors.New("email already registered")
 	}
 
-	// Hash password
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(req.Password), bcrypt.DefaultCost)
 	if err != nil {
 		return nil, err
@@ -86,12 +84,10 @@ func (s *authService) Login(req *models.UserLoginRequest) (*models.AuthResponse,
 		return nil, err
 	}
 
-	// Check if user registered with OAuth
 	if user.Provider != "local" {
 		return nil, errors.New("please login with " + user.Provider)
 	}
 
-	// Verify password
 	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(req.Password)); err != nil {
 		return nil, errors.New("invalid email or password")
 	}
@@ -150,14 +146,12 @@ func (s *authService) GithubOAuth(code string) (*models.AuthResponse, error) {
 }
 
 func (s *authService) handleOAuthLogin(userInfo *utils.OAuthUserInfo) (*models.AuthResponse, error) {
-	// Check if user exists
 	user, err := s.repo.FindByEmail(userInfo.Email)
 
 	if err != nil && !errors.Is(err, gorm.ErrRecordNotFound) {
 		return nil, err
 	}
 
-	// Create new user if not exists
 	if user == nil {
 		user = &models.User{
 			Email:      userInfo.Email,
@@ -173,7 +167,6 @@ func (s *authService) handleOAuthLogin(userInfo *utils.OAuthUserInfo) (*models.A
 			return nil, err
 		}
 	} else {
-		// Update user info if exists
 		user.Name = userInfo.Name
 		user.AvatarURL = userInfo.AvatarURL
 		user.IsVerified = true

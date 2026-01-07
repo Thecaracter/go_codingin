@@ -31,7 +31,6 @@ func (s *cartService) AddToCart(userID, productID uint, quantity int) (*models.C
 		return nil, errors.New("quantity must be greater than 0")
 	}
 
-	// Check if product exists and is active
 	product, err := s.productRepo.GetByID(productID)
 	if err != nil {
 		return nil, errors.New("product not found")
@@ -41,10 +40,8 @@ func (s *cartService) AddToCart(userID, productID uint, quantity int) (*models.C
 		return nil, errors.New("product is not available")
 	}
 
-	// Check if item already in cart
 	existingCart, err := s.cartRepo.GetByUserAndProduct(userID, productID)
 	if err == nil {
-		// Update quantity
 		newQuantity := existingCart.Quantity + quantity
 		existingCart.Quantity = newQuantity
 		if err := s.cartRepo.Update(existingCart); err != nil {
@@ -53,7 +50,6 @@ func (s *cartService) AddToCart(userID, productID uint, quantity int) (*models.C
 		return existingCart, nil
 	}
 
-	// Create new cart item
 	cart := &models.Cart{
 		UserID:    userID,
 		ProductID: productID,
@@ -73,7 +69,6 @@ func (s *cartService) GetUserCart(userID uint) ([]models.Cart, float64, error) {
 		return nil, 0, err
 	}
 
-	// Calculate total
 	var total float64
 	for _, cart := range carts {
 		total += cart.Product.Price * float64(cart.Quantity)
@@ -92,12 +87,10 @@ func (s *cartService) UpdateCartItem(userID, cartID uint, quantity int) (*models
 		return nil, errors.New("cart item not found")
 	}
 
-	// Verify ownership
 	if cart.UserID != userID {
 		return nil, errors.New("unauthorized")
 	}
 
-	// Check product exists
 	_, err = s.productRepo.GetByID(cart.ProductID)
 	if err != nil {
 		return nil, errors.New("product not found")
@@ -117,7 +110,6 @@ func (s *cartService) RemoveFromCart(userID, cartID uint) error {
 		return errors.New("cart item not found")
 	}
 
-	// Verify ownership
 	if cart.UserID != userID {
 		return errors.New("unauthorized")
 	}
