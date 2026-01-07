@@ -13,6 +13,7 @@ type UserRepository interface {
 	FindByEmail(email string) (*models.User, error)
 	Update(user *models.User) error
 	Delete(id uint) error
+	GetAllUsers(page, limit int) ([]models.User, int64, error)
 }
 
 type userRepository struct {
@@ -57,4 +58,18 @@ func (r *userRepository) Update(user *models.User) error {
 
 func (r *userRepository) Delete(id uint) error {
 	return r.db.Delete(&models.User{}, id).Error
+}
+
+func (r *userRepository) GetAllUsers(page, limit int) ([]models.User, int64, error) {
+	var users []models.User
+	var total int64
+
+	query := r.db.Model(&models.User{})
+	if err := query.Count(&total).Error; err != nil {
+		return nil, 0, err
+	}
+
+	offset := (page - 1) * limit
+	err := query.Offset(offset).Limit(limit).Find(&users).Error
+	return users, total, err
 }

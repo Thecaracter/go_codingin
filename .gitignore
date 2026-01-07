@@ -30,3 +30,6 @@ go.work
 # OS
 .DS_Store
 Thumbs.db
+# Frontend Development Guide (internal use only)
+FRONTEND_GUIDE.md
+docs/api-structure.md
