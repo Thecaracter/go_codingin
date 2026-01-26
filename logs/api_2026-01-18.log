@@ -1,0 +1,3788 @@
+
+{
+  "timestamp": "2026-01-18 05:54:35",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "password123"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "76.5762ms",
+  "duration_ms": 76,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:54:38",
+  "method": "GET",
+  "path": "/api/v1/auth/google",
+  "headers": {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 307,
+  "response_body": "\u003ca href=\"https://accounts.google.com/o/oauth2/auth?client_id=212161497936-oh0hsngh0pgt1fch5i1mv52k44s7dk4r.apps.googleusercontent.com\u0026amp;redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fv1%2Fauth%2Fgoogle%2Fcallback\u0026amp;response_type=code\u0026amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid\u0026amp;state=state\"\u003eTemporary Redirect\u003c/a\u003e.\n\n",
+  "duration": "1.1602ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:54:42",
+  "method": "GET",
+  "path": "/api/v1/auth/google/callback",
+  "query": {
+    "authuser": "0",
+    "code": "4/0ASc3gC1tjgkOwi4F1gO-XO13cr5_XEqsARNvwuhBUagI9k0k2NNwp_U29rFTN6yoUU-3OA",
+    "prompt": "consent",
+    "scope": "email profile https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email openid",
+    "state": "state"
+  },
+  "headers": {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 307,
+  "response_body": "\u003ca href=\"http://localhost:3000/auth/callback?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJlbWFpbCI6ImNvZGluZ2luMTlAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJleHAiOjE3Njg3NzY4ODMsImlhdCI6MTc2ODY5MDQ4M30.UfkjJDSV5CKoZsfUGyPS3IoDz7xdlD6URxT6qfTAdcw\u0026amp;user=%7B%22id%22%3A2%2C%22name%22%3A%22coding+in%22%2C%22email%22%3A%22codingin19%40gmail.com%22%2C%22role%22%3A%22user%22%2C%22provider%22%3A%22google%22%2C%22avatar_url%22%3A%22https%3A%2F%2Flh3.googleusercontent.com%2Fa%2FACg8ocJxZirfxeCVacBi-NrJkkGMo-bp3RAN0QRF5GomV6LOhcMbDw%3Ds96-c%22%2C%22is_verified%22%3Atrue%2C%22created_at%22%3A%222025-12-21T11%3A58%3A26.203877%2B07%3A00%22%7D\"\u003eTemporary Redirect\u003c/a\u003e.\n\n",
+  "duration": "306.2028ms",
+  "duration_ms": 306,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:54:43",
+  "method": "GET",
+  "path": "/api/v1/cart",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "items": [
+        {
+          "created_at": "2026-01-15T05:44:43.629514+07:00",
+          "id": 7,
+          "product": {
+            "category": {
+              "created_at": "2026-01-08T21:55:42.326209+07:00",
+              "description": "Python, PHP, and JS utility scripts",
+              "icon": "terminal",
+              "id": 4,
+              "is_active": true,
+              "name": "Scripts",
+              "order": 4,
+              "slug": "scripts",
+              "updated_at": "2026-01-08T21:55:42.326209+07:00"
+            },
+            "category_id": 4,
+            "created_at": "2026-01-13T02:20:25.212431+07:00",
+            "created_by": 1,
+            "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+            "downloads_count": 0,
+            "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+            "id": 5,
+            "is_active": true,
+            "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+            "price": 150000,
+            "rating_average": 0,
+            "requirements": "[]",
+            "slug": "instagram-automation-bot",
+            "tech_stack": "[\"Python\", \"Selenium\"]",
+            "title": "Instagram Automation Bot",
+            "type": "scripts",
+            "updated_at": "2026-01-13T02:20:25.212431+07:00",
+            "views_count": 0
+          },
+          "product_id": 5,
+          "quantity": 1,
+          "updated_at": "2026-01-15T05:44:43.629514+07:00",
+          "user_id": 2
+        }
+      ],
+      "total": 150000
+    },
+    "message": "Cart retrieved successfully",
+    "success": true
+  },
+  "duration": "8.6637ms",
+  "duration_ms": 8,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:54:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "50.6056ms",
+  "duration_ms": 50,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:54:43",
+  "method": "GET",
+  "path": "/api/v1/wishlist",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": [
+      {
+        "created_at": "2026-01-15T05:49:20.288287+07:00",
+        "id": 10,
+        "product": {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.326209+07:00",
+            "description": "Python, PHP, and JS utility scripts",
+            "icon": "terminal",
+            "id": 4,
+            "is_active": true,
+            "name": "Scripts",
+            "order": 4,
+            "slug": "scripts",
+            "updated_at": "2026-01-08T21:55:42.326209+07:00"
+          },
+          "category_id": 4,
+          "created_at": "2026-01-13T02:20:25.212431+07:00",
+          "created_by": 1,
+          "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+          "downloads_count": 0,
+          "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+          "id": 5,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 150000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "instagram-automation-bot",
+          "tech_stack": "[\"Python\", \"Selenium\"]",
+          "title": "Instagram Automation Bot",
+          "type": "scripts",
+          "updated_at": "2026-01-13T02:20:25.212431+07:00",
+          "views_count": 0
+        },
+        "product_id": 5,
+        "user_id": 2
+      }
+    ],
+    "message": "Wishlist retrieved successfully",
+    "success": true
+  },
+  "duration": "38.4503ms",
+  "duration_ms": 38,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:54:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "580.6µs",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:54:43",
+  "method": "GET",
+  "path": "/api/v1/cart",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "items": [
+        {
+          "created_at": "2026-01-15T05:44:43.629514+07:00",
+          "id": 7,
+          "product": {
+            "category": {
+              "created_at": "2026-01-08T21:55:42.326209+07:00",
+              "description": "Python, PHP, and JS utility scripts",
+              "icon": "terminal",
+              "id": 4,
+              "is_active": true,
+              "name": "Scripts",
+              "order": 4,
+              "slug": "scripts",
+              "updated_at": "2026-01-08T21:55:42.326209+07:00"
+            },
+            "category_id": 4,
+            "created_at": "2026-01-13T02:20:25.212431+07:00",
+            "created_by": 1,
+            "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+            "downloads_count": 0,
+            "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+            "id": 5,
+            "is_active": true,
+            "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+            "price": 150000,
+            "rating_average": 0,
+            "requirements": "[]",
+            "slug": "instagram-automation-bot",
+            "tech_stack": "[\"Python\", \"Selenium\"]",
+            "title": "Instagram Automation Bot",
+            "type": "scripts",
+            "updated_at": "2026-01-13T02:20:25.212431+07:00",
+            "views_count": 0
+          },
+          "product_id": 5,
+          "quantity": 1,
+          "updated_at": "2026-01-15T05:44:43.629514+07:00",
+          "user_id": 2
+        }
+      ],
+      "total": 150000
+    },
+    "message": "Cart retrieved successfully",
+    "success": true
+  },
+  "duration": "1.5578ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:54:43",
+  "method": "GET",
+  "path": "/api/v1/wishlist",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": [
+      {
+        "created_at": "2026-01-15T05:49:20.288287+07:00",
+        "id": 10,
+        "product": {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.326209+07:00",
+            "description": "Python, PHP, and JS utility scripts",
+            "icon": "terminal",
+            "id": 4,
+            "is_active": true,
+            "name": "Scripts",
+            "order": 4,
+            "slug": "scripts",
+            "updated_at": "2026-01-08T21:55:42.326209+07:00"
+          },
+          "category_id": 4,
+          "created_at": "2026-01-13T02:20:25.212431+07:00",
+          "created_by": 1,
+          "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+          "downloads_count": 0,
+          "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+          "id": 5,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 150000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "instagram-automation-bot",
+          "tech_stack": "[\"Python\", \"Selenium\"]",
+          "title": "Instagram Automation Bot",
+          "type": "scripts",
+          "updated_at": "2026-01-13T02:20:25.212431+07:00",
+          "views_count": 0
+        },
+        "product_id": 5,
+        "user_id": 2
+      }
+    ],
+    "message": "Wishlist retrieved successfully",
+    "success": true
+  },
+  "duration": "2.5347ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:54:43",
+  "method": "GET",
+  "path": "/api/v1/products",
+  "query": {
+    "limit": "6"
+  },
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "limit": 6,
+      "page": 1,
+      "products": [
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.326209+07:00",
+            "description": "Python, PHP, and JS utility scripts",
+            "icon": "terminal",
+            "id": 4,
+            "is_active": true,
+            "name": "Scripts",
+            "order": 4,
+            "slug": "scripts",
+            "updated_at": "2026-01-08T21:55:42.326209+07:00"
+          },
+          "category_id": 4,
+          "created_at": "2026-01-13T02:20:25.212431+07:00",
+          "created_by": 1,
+          "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+          "downloads_count": 0,
+          "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+          "id": 5,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 150000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "instagram-automation-bot",
+          "tech_stack": "[\"Python\", \"Selenium\"]",
+          "title": "Instagram Automation Bot",
+          "type": "scripts",
+          "updated_at": "2026-01-13T02:20:25.212431+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.322557+07:00",
+            "description": "UI kits and website templates",
+            "icon": "layout",
+            "id": 2,
+            "is_active": true,
+            "name": "Templates",
+            "order": 2,
+            "slug": "templates",
+            "updated_at": "2026-01-08T21:55:42.322557+07:00"
+          },
+          "category_id": 2,
+          "created_at": "2026-01-13T02:20:25.211149+07:00",
+          "created_by": 1,
+          "description": "Clean, responsive, and customizable admin dashboard template built with Vue 3 and Tailwind CSS.",
+          "downloads_count": 0,
+          "features": "[\"Dark Mode Support\", \"Responsive Layout\", \"Chart.js Integration\", \"Form Components\"]",
+          "id": 4,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 250000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "modern-admin-dashboard",
+          "tech_stack": "[\"Vue 3\", \"Tailwind CSS\", \"Vite\"]",
+          "title": "Modern Admin Dashboard UI",
+          "type": "template",
+          "updated_at": "2026-01-13T02:20:25.211149+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.325061+07:00",
+            "description": "Flutter, React Native, and native apps",
+            "icon": "smartphone",
+            "id": 3,
+            "is_active": true,
+            "name": "Mobile Apps",
+            "order": 3,
+            "slug": "mobile-apps",
+            "updated_at": "2026-01-08T21:55:42.325061+07:00"
+          },
+          "category_id": 3,
+          "created_at": "2026-01-13T02:20:25.210572+07:00",
+          "created_by": 1,
+          "description": "Uber Eats clone made with Flutter. Beautiful animations, real-time tracking, and vendor dashboard included. Works on both iOS and Android.",
+          "downloads_count": 0,
+          "features": "[\"Real-time Tracking\", \"Push Notifications\", \"Vendor App\", \"Dark Mode\"]",
+          "id": 3,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "flutter-delivery-app",
+          "tech_stack": "[\"Flutter\", \"Firebase\", \"Google Maps API\"]",
+          "title": "Flutter Delivery App",
+          "type": "mobile_apps",
+          "updated_at": "2026-01-13T02:20:25.210572+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.20936+07:00",
+          "created_by": 1,
+          "description": "Launch your SaaS in days with this comprehensive Next.js boilerplate. Includes Stripe integration, Authentication, Database setup with Prisma, and tailwind UI components.",
+          "downloads_count": 0,
+          "features": "[\"Authentication\", \"Subscription Payments\", \"Admin Dashboard\", \"SEO Optimized\"]",
+          "id": 2,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1618477247222-ac591245363d?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 750000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "nextjs-saas-boilerplate",
+          "tech_stack": "[\"Next.js\", \"TypeScript\", \"Tailwind CSS\", \"Prisma\", \"Stripe\"]",
+          "title": "NextJS SaaS Boilerplate",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.20936+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.197105+07:00",
+          "created_by": 1,
+          "description": "A complete microservices-based e-commerce backend written in Go (Golang). Includes services for products, orders, users, and payments. Features gRPC communication, Kafka event bus, and Docker compose setup.",
+          "downloads_count": 0,
+          "features": "[\"Microservices Architecture\", \"gRPC Communication\", \"Event-Driven\", \"Scalable\"]",
+          "id": 1,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\", \"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 1500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "ecommerce-microservices-go",
+          "tech_stack": "[\"Golang\", \"gRPC\", \"Kafka\", \"PostgreSQL\", \"Docker\"]",
+          "title": "E-Commerce Microservices Go",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.197105+07:00",
+          "views_count": 0
+        }
+      ],
+      "total": 5
+    },
+    "message": "Products retrieved successfully",
+    "success": true
+  },
+  "duration": "3.8936ms",
+  "duration_ms": 3,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:55:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.6682ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:55:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "3.6639ms",
+  "duration_ms": 3,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:56:14",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "3.0235ms",
+  "duration_ms": 3,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:56:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0134ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:57:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5423ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:57:44",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "3.019ms",
+  "duration_ms": 3,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:58:14",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "1.5031ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:59:01",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5025ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:59:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5116ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 05:59:44",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "3.3163ms",
+  "duration_ms": 3,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:00:14",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0119ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:00:44",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5125ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:01:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.063ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:01:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.502ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:02:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "1.5041ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:02:44",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0389ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:03:14",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0099ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:04:01",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0014ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:04:22",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0132ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:04:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0103ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:05:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.522ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:05:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.2104ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:06:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0118ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:06:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0085ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:07:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.6181ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:07:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "3.6723ms",
+  "duration_ms": 3,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:08:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0097ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:08:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "1.1572ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:09:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0023ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:09:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "3.0215ms",
+  "duration_ms": 3,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:10:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "3.7257ms",
+  "duration_ms": 3,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:10:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.01ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:11:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0153ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:11:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0042ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:12:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0375ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:12:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.009ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:13:14",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0087ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:13:44",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5099ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:14:45",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "1.5017ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:15:46",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "3.0125ms",
+  "duration_ms": 3,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:16:05",
+  "method": "DELETE",
+  "path": "/api/v1/wishlist/10",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "message": "Item removed from wishlist",
+    "success": true
+  },
+  "duration": "53.1815ms",
+  "duration_ms": 53,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:16:05",
+  "method": "GET",
+  "path": "/api/v1/wishlist",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": [],
+    "message": "Wishlist retrieved successfully",
+    "success": true
+  },
+  "duration": "2.588ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:16:07",
+  "method": "POST",
+  "path": "/api/v1/wishlist",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "product_id": 5
+  },
+  "status_code": 201,
+  "response_body": {
+    "data": {
+      "created_at": "2026-01-18T06:16:07.5151645+07:00",
+      "id": 11,
+      "product_id": 5,
+      "user_id": 2
+    },
+    "message": "Item added to wishlist",
+    "success": true
+  },
+  "duration": "20.0842ms",
+  "duration_ms": 20,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:16:07",
+  "method": "GET",
+  "path": "/api/v1/wishlist",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": [
+      {
+        "created_at": "2026-01-18T06:16:07.515164+07:00",
+        "id": 11,
+        "product": {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.326209+07:00",
+            "description": "Python, PHP, and JS utility scripts",
+            "icon": "terminal",
+            "id": 4,
+            "is_active": true,
+            "name": "Scripts",
+            "order": 4,
+            "slug": "scripts",
+            "updated_at": "2026-01-08T21:55:42.326209+07:00"
+          },
+          "category_id": 4,
+          "created_at": "2026-01-13T02:20:25.212431+07:00",
+          "created_by": 1,
+          "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+          "downloads_count": 0,
+          "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+          "id": 5,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 150000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "instagram-automation-bot",
+          "tech_stack": "[\"Python\", \"Selenium\"]",
+          "title": "Instagram Automation Bot",
+          "type": "scripts",
+          "updated_at": "2026-01-13T02:20:25.212431+07:00",
+          "views_count": 0
+        },
+        "product_id": 5,
+        "user_id": 2
+      }
+    ],
+    "message": "Wishlist retrieved successfully",
+    "success": true
+  },
+  "duration": "1.5036ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:16:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0396ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:16:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0081ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:17:14",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0105ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:17:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0121ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:18:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "6.0256ms",
+  "duration_ms": 6,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:18:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5133ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:19:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5024ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:19:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "1.5067ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:20:14",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "1.5033ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:20:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0431ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:21:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5229ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:21:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0151ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:22:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.538ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:22:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.012ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:23:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.253ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:23:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0131ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:24:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5135ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:24:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.505ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:25:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "1.5036ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:25:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0109ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:26:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0108ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:26:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0266ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:27:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5363ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:27:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5109ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:28:14",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0106ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:28:44",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "1.504ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:29:45",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "1.503ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:30:46",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0129ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:31:47",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0015ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:32:48",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0214ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:33:49",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0106ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:34:50",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5119ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:35:51",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "1.5033ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:36:52",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5108ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:37:14",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0066ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:37:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0101ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:38:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0154ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:38:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5682ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:39:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.5203ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:39:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0016ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:40:14",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "1.511ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:40:44",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0414ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:41:45",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "5.0215ms",
+  "duration_ms": 5,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:41:52",
+  "method": "GET",
+  "path": "/api/v1/products",
+  "query": {
+    "limit": "20"
+  },
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "limit": 20,
+      "page": 1,
+      "products": [
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.326209+07:00",
+            "description": "Python, PHP, and JS utility scripts",
+            "icon": "terminal",
+            "id": 4,
+            "is_active": true,
+            "name": "Scripts",
+            "order": 4,
+            "slug": "scripts",
+            "updated_at": "2026-01-08T21:55:42.326209+07:00"
+          },
+          "category_id": 4,
+          "created_at": "2026-01-13T02:20:25.212431+07:00",
+          "created_by": 1,
+          "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+          "downloads_count": 0,
+          "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+          "id": 5,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 150000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "instagram-automation-bot",
+          "tech_stack": "[\"Python\", \"Selenium\"]",
+          "title": "Instagram Automation Bot",
+          "type": "scripts",
+          "updated_at": "2026-01-13T02:20:25.212431+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.322557+07:00",
+            "description": "UI kits and website templates",
+            "icon": "layout",
+            "id": 2,
+            "is_active": true,
+            "name": "Templates",
+            "order": 2,
+            "slug": "templates",
+            "updated_at": "2026-01-08T21:55:42.322557+07:00"
+          },
+          "category_id": 2,
+          "created_at": "2026-01-13T02:20:25.211149+07:00",
+          "created_by": 1,
+          "description": "Clean, responsive, and customizable admin dashboard template built with Vue 3 and Tailwind CSS.",
+          "downloads_count": 0,
+          "features": "[\"Dark Mode Support\", \"Responsive Layout\", \"Chart.js Integration\", \"Form Components\"]",
+          "id": 4,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 250000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "modern-admin-dashboard",
+          "tech_stack": "[\"Vue 3\", \"Tailwind CSS\", \"Vite\"]",
+          "title": "Modern Admin Dashboard UI",
+          "type": "template",
+          "updated_at": "2026-01-13T02:20:25.211149+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.325061+07:00",
+            "description": "Flutter, React Native, and native apps",
+            "icon": "smartphone",
+            "id": 3,
+            "is_active": true,
+            "name": "Mobile Apps",
+            "order": 3,
+            "slug": "mobile-apps",
+            "updated_at": "2026-01-08T21:55:42.325061+07:00"
+          },
+          "category_id": 3,
+          "created_at": "2026-01-13T02:20:25.210572+07:00",
+          "created_by": 1,
+          "description": "Uber Eats clone made with Flutter. Beautiful animations, real-time tracking, and vendor dashboard included. Works on both iOS and Android.",
+          "downloads_count": 0,
+          "features": "[\"Real-time Tracking\", \"Push Notifications\", \"Vendor App\", \"Dark Mode\"]",
+          "id": 3,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "flutter-delivery-app",
+          "tech_stack": "[\"Flutter\", \"Firebase\", \"Google Maps API\"]",
+          "title": "Flutter Delivery App",
+          "type": "mobile_apps",
+          "updated_at": "2026-01-13T02:20:25.210572+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.20936+07:00",
+          "created_by": 1,
+          "description": "Launch your SaaS in days with this comprehensive Next.js boilerplate. Includes Stripe integration, Authentication, Database setup with Prisma, and tailwind UI components.",
+          "downloads_count": 0,
+          "features": "[\"Authentication\", \"Subscription Payments\", \"Admin Dashboard\", \"SEO Optimized\"]",
+          "id": 2,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1618477247222-ac591245363d?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 750000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "nextjs-saas-boilerplate",
+          "tech_stack": "[\"Next.js\", \"TypeScript\", \"Tailwind CSS\", \"Prisma\", \"Stripe\"]",
+          "title": "NextJS SaaS Boilerplate",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.20936+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.197105+07:00",
+          "created_by": 1,
+          "description": "A complete microservices-based e-commerce backend written in Go (Golang). Includes services for products, orders, users, and payments. Features gRPC communication, Kafka event bus, and Docker compose setup.",
+          "downloads_count": 0,
+          "features": "[\"Microservices Architecture\", \"gRPC Communication\", \"Event-Driven\", \"Scalable\"]",
+          "id": 1,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\", \"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 1500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "ecommerce-microservices-go",
+          "tech_stack": "[\"Golang\", \"gRPC\", \"Kafka\", \"PostgreSQL\", \"Docker\"]",
+          "title": "E-Commerce Microservices Go",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.197105+07:00",
+          "views_count": 0
+        }
+      ],
+      "total": 5
+    },
+    "message": "Products retrieved successfully",
+    "success": true
+  },
+  "duration": "38.8831ms",
+  "duration_ms": 38,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:41:59",
+  "method": "GET",
+  "path": "/api/v1/cart",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "items": [
+        {
+          "created_at": "2026-01-15T05:44:43.629514+07:00",
+          "id": 7,
+          "product": {
+            "category": {
+              "created_at": "2026-01-08T21:55:42.326209+07:00",
+              "description": "Python, PHP, and JS utility scripts",
+              "icon": "terminal",
+              "id": 4,
+              "is_active": true,
+              "name": "Scripts",
+              "order": 4,
+              "slug": "scripts",
+              "updated_at": "2026-01-08T21:55:42.326209+07:00"
+            },
+            "category_id": 4,
+            "created_at": "2026-01-13T02:20:25.212431+07:00",
+            "created_by": 1,
+            "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+            "downloads_count": 0,
+            "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+            "id": 5,
+            "is_active": true,
+            "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+            "price": 150000,
+            "rating_average": 0,
+            "requirements": "[]",
+            "slug": "instagram-automation-bot",
+            "tech_stack": "[\"Python\", \"Selenium\"]",
+            "title": "Instagram Automation Bot",
+            "type": "scripts",
+            "updated_at": "2026-01-13T02:20:25.212431+07:00",
+            "views_count": 0
+          },
+          "product_id": 5,
+          "quantity": 1,
+          "updated_at": "2026-01-15T05:44:43.629514+07:00",
+          "user_id": 2
+        }
+      ],
+      "total": 150000
+    },
+    "message": "Cart retrieved successfully",
+    "success": true
+  },
+  "duration": "8.0072ms",
+  "duration_ms": 8,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:42:01",
+  "method": "GET",
+  "path": "/api/v1/products/5",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "category": {
+        "created_at": "2026-01-08T21:55:42.326209+07:00",
+        "description": "Python, PHP, and JS utility scripts",
+        "icon": "terminal",
+        "id": 4,
+        "is_active": true,
+        "name": "Scripts",
+        "order": 4,
+        "slug": "scripts",
+        "updated_at": "2026-01-08T21:55:42.326209+07:00"
+      },
+      "category_id": 4,
+      "created_at": "2026-01-13T02:20:25.212431+07:00",
+      "created_by": 1,
+      "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+      "downloads_count": 0,
+      "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+      "id": 5,
+      "is_active": true,
+      "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+      "price": 150000,
+      "rating_average": 0,
+      "requirements": "[]",
+      "slug": "instagram-automation-bot",
+      "tech_stack": "[\"Python\", \"Selenium\"]",
+      "title": "Instagram Automation Bot",
+      "type": "scripts",
+      "updated_at": "2026-01-13T02:20:25.212431+07:00",
+      "views_count": 0
+    },
+    "message": "Product retrieved successfully",
+    "success": true
+  },
+  "duration": "5.6764ms",
+  "duration_ms": 5,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:42:05",
+  "method": "POST",
+  "path": "/api/v1/orders",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "product_id": 5,
+    "quantity": 1
+  },
+  "status_code": 400,
+  "response_body": {
+    "message": "ERROR: invalid input syntax for type json (SQLSTATE 22P02)",
+    "success": false
+  },
+  "duration": "38.0915ms",
+  "duration_ms": 38,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:42:11",
+  "method": "POST",
+  "path": "/api/v1/orders",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "notes": ".",
+    "product_id": 5,
+    "quantity": 1
+  },
+  "status_code": 400,
+  "response_body": {
+    "message": "ERROR: invalid input syntax for type json (SQLSTATE 22P02)",
+    "success": false
+  },
+  "duration": "4.0178ms",
+  "duration_ms": 4,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:42:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.01ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:42:18",
+  "method": "GET",
+  "path": "/api/v1/products",
+  "query": {
+    "limit": "20"
+  },
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "limit": 20,
+      "page": 1,
+      "products": [
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.326209+07:00",
+            "description": "Python, PHP, and JS utility scripts",
+            "icon": "terminal",
+            "id": 4,
+            "is_active": true,
+            "name": "Scripts",
+            "order": 4,
+            "slug": "scripts",
+            "updated_at": "2026-01-08T21:55:42.326209+07:00"
+          },
+          "category_id": 4,
+          "created_at": "2026-01-13T02:20:25.212431+07:00",
+          "created_by": 1,
+          "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+          "downloads_count": 0,
+          "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+          "id": 5,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 150000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "instagram-automation-bot",
+          "tech_stack": "[\"Python\", \"Selenium\"]",
+          "title": "Instagram Automation Bot",
+          "type": "scripts",
+          "updated_at": "2026-01-13T02:20:25.212431+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.322557+07:00",
+            "description": "UI kits and website templates",
+            "icon": "layout",
+            "id": 2,
+            "is_active": true,
+            "name": "Templates",
+            "order": 2,
+            "slug": "templates",
+            "updated_at": "2026-01-08T21:55:42.322557+07:00"
+          },
+          "category_id": 2,
+          "created_at": "2026-01-13T02:20:25.211149+07:00",
+          "created_by": 1,
+          "description": "Clean, responsive, and customizable admin dashboard template built with Vue 3 and Tailwind CSS.",
+          "downloads_count": 0,
+          "features": "[\"Dark Mode Support\", \"Responsive Layout\", \"Chart.js Integration\", \"Form Components\"]",
+          "id": 4,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 250000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "modern-admin-dashboard",
+          "tech_stack": "[\"Vue 3\", \"Tailwind CSS\", \"Vite\"]",
+          "title": "Modern Admin Dashboard UI",
+          "type": "template",
+          "updated_at": "2026-01-13T02:20:25.211149+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.325061+07:00",
+            "description": "Flutter, React Native, and native apps",
+            "icon": "smartphone",
+            "id": 3,
+            "is_active": true,
+            "name": "Mobile Apps",
+            "order": 3,
+            "slug": "mobile-apps",
+            "updated_at": "2026-01-08T21:55:42.325061+07:00"
+          },
+          "category_id": 3,
+          "created_at": "2026-01-13T02:20:25.210572+07:00",
+          "created_by": 1,
+          "description": "Uber Eats clone made with Flutter. Beautiful animations, real-time tracking, and vendor dashboard included. Works on both iOS and Android.",
+          "downloads_count": 0,
+          "features": "[\"Real-time Tracking\", \"Push Notifications\", \"Vendor App\", \"Dark Mode\"]",
+          "id": 3,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "flutter-delivery-app",
+          "tech_stack": "[\"Flutter\", \"Firebase\", \"Google Maps API\"]",
+          "title": "Flutter Delivery App",
+          "type": "mobile_apps",
+          "updated_at": "2026-01-13T02:20:25.210572+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.20936+07:00",
+          "created_by": 1,
+          "description": "Launch your SaaS in days with this comprehensive Next.js boilerplate. Includes Stripe integration, Authentication, Database setup with Prisma, and tailwind UI components.",
+          "downloads_count": 0,
+          "features": "[\"Authentication\", \"Subscription Payments\", \"Admin Dashboard\", \"SEO Optimized\"]",
+          "id": 2,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1618477247222-ac591245363d?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 750000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "nextjs-saas-boilerplate",
+          "tech_stack": "[\"Next.js\", \"TypeScript\", \"Tailwind CSS\", \"Prisma\", \"Stripe\"]",
+          "title": "NextJS SaaS Boilerplate",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.20936+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.197105+07:00",
+          "created_by": 1,
+          "description": "A complete microservices-based e-commerce backend written in Go (Golang). Includes services for products, orders, users, and payments. Features gRPC communication, Kafka event bus, and Docker compose setup.",
+          "downloads_count": 0,
+          "features": "[\"Microservices Architecture\", \"gRPC Communication\", \"Event-Driven\", \"Scalable\"]",
+          "id": 1,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\", \"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 1500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "ecommerce-microservices-go",
+          "tech_stack": "[\"Golang\", \"gRPC\", \"Kafka\", \"PostgreSQL\", \"Docker\"]",
+          "title": "E-Commerce Microservices Go",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.197105+07:00",
+          "views_count": 0
+        }
+      ],
+      "total": 5
+    },
+    "message": "Products retrieved successfully",
+    "success": true
+  },
+  "duration": "3.5203ms",
+  "duration_ms": 3,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:42:21",
+  "method": "GET",
+  "path": "/api/v1/products",
+  "query": {
+    "limit": "6"
+  },
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "limit": 6,
+      "page": 1,
+      "products": [
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.326209+07:00",
+            "description": "Python, PHP, and JS utility scripts",
+            "icon": "terminal",
+            "id": 4,
+            "is_active": true,
+            "name": "Scripts",
+            "order": 4,
+            "slug": "scripts",
+            "updated_at": "2026-01-08T21:55:42.326209+07:00"
+          },
+          "category_id": 4,
+          "created_at": "2026-01-13T02:20:25.212431+07:00",
+          "created_by": 1,
+          "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+          "downloads_count": 0,
+          "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+          "id": 5,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 150000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "instagram-automation-bot",
+          "tech_stack": "[\"Python\", \"Selenium\"]",
+          "title": "Instagram Automation Bot",
+          "type": "scripts",
+          "updated_at": "2026-01-13T02:20:25.212431+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.322557+07:00",
+            "description": "UI kits and website templates",
+            "icon": "layout",
+            "id": 2,
+            "is_active": true,
+            "name": "Templates",
+            "order": 2,
+            "slug": "templates",
+            "updated_at": "2026-01-08T21:55:42.322557+07:00"
+          },
+          "category_id": 2,
+          "created_at": "2026-01-13T02:20:25.211149+07:00",
+          "created_by": 1,
+          "description": "Clean, responsive, and customizable admin dashboard template built with Vue 3 and Tailwind CSS.",
+          "downloads_count": 0,
+          "features": "[\"Dark Mode Support\", \"Responsive Layout\", \"Chart.js Integration\", \"Form Components\"]",
+          "id": 4,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 250000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "modern-admin-dashboard",
+          "tech_stack": "[\"Vue 3\", \"Tailwind CSS\", \"Vite\"]",
+          "title": "Modern Admin Dashboard UI",
+          "type": "template",
+          "updated_at": "2026-01-13T02:20:25.211149+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.325061+07:00",
+            "description": "Flutter, React Native, and native apps",
+            "icon": "smartphone",
+            "id": 3,
+            "is_active": true,
+            "name": "Mobile Apps",
+            "order": 3,
+            "slug": "mobile-apps",
+            "updated_at": "2026-01-08T21:55:42.325061+07:00"
+          },
+          "category_id": 3,
+          "created_at": "2026-01-13T02:20:25.210572+07:00",
+          "created_by": 1,
+          "description": "Uber Eats clone made with Flutter. Beautiful animations, real-time tracking, and vendor dashboard included. Works on both iOS and Android.",
+          "downloads_count": 0,
+          "features": "[\"Real-time Tracking\", \"Push Notifications\", \"Vendor App\", \"Dark Mode\"]",
+          "id": 3,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "flutter-delivery-app",
+          "tech_stack": "[\"Flutter\", \"Firebase\", \"Google Maps API\"]",
+          "title": "Flutter Delivery App",
+          "type": "mobile_apps",
+          "updated_at": "2026-01-13T02:20:25.210572+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.20936+07:00",
+          "created_by": 1,
+          "description": "Launch your SaaS in days with this comprehensive Next.js boilerplate. Includes Stripe integration, Authentication, Database setup with Prisma, and tailwind UI components.",
+          "downloads_count": 0,
+          "features": "[\"Authentication\", \"Subscription Payments\", \"Admin Dashboard\", \"SEO Optimized\"]",
+          "id": 2,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1618477247222-ac591245363d?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 750000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "nextjs-saas-boilerplate",
+          "tech_stack": "[\"Next.js\", \"TypeScript\", \"Tailwind CSS\", \"Prisma\", \"Stripe\"]",
+          "title": "NextJS SaaS Boilerplate",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.20936+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.197105+07:00",
+          "created_by": 1,
+          "description": "A complete microservices-based e-commerce backend written in Go (Golang). Includes services for products, orders, users, and payments. Features gRPC communication, Kafka event bus, and Docker compose setup.",
+          "downloads_count": 0,
+          "features": "[\"Microservices Architecture\", \"gRPC Communication\", \"Event-Driven\", \"Scalable\"]",
+          "id": 1,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\", \"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 1500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "ecommerce-microservices-go",
+          "tech_stack": "[\"Golang\", \"gRPC\", \"Kafka\", \"PostgreSQL\", \"Docker\"]",
+          "title": "E-Commerce Microservices Go",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.197105+07:00",
+          "views_count": 0
+        }
+      ],
+      "total": 5
+    },
+    "message": "Products retrieved successfully",
+    "success": true
+  },
+  "duration": "4.0052ms",
+  "duration_ms": 4,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:42:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "7.0262ms",
+  "duration_ms": 7,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:43:13",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0022ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-18 06:43:43",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...Adcw",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "2.0084ms",
+  "duration_ms": 2,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 2,
+  "user_email": "codingin19@gmail.com"
+}
+========================================

@@ -1,0 +1,1487 @@
+
+{
+  "timestamp": "2026-01-17 22:41:35",
+  "method": "GET",
+  "path": "/api/v1/products",
+  "query": {
+    "limit": "6"
+  },
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "limit": 6,
+      "page": 1,
+      "products": [
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.326209+07:00",
+            "description": "Python, PHP, and JS utility scripts",
+            "icon": "terminal",
+            "id": 4,
+            "is_active": true,
+            "name": "Scripts",
+            "order": 4,
+            "slug": "scripts",
+            "updated_at": "2026-01-08T21:55:42.326209+07:00"
+          },
+          "category_id": 4,
+          "created_at": "2026-01-13T02:20:25.212431+07:00",
+          "created_by": 1,
+          "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+          "downloads_count": 0,
+          "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+          "id": 5,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 150000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "instagram-automation-bot",
+          "tech_stack": "[\"Python\", \"Selenium\"]",
+          "title": "Instagram Automation Bot",
+          "type": "scripts",
+          "updated_at": "2026-01-13T02:20:25.212431+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.322557+07:00",
+            "description": "UI kits and website templates",
+            "icon": "layout",
+            "id": 2,
+            "is_active": true,
+            "name": "Templates",
+            "order": 2,
+            "slug": "templates",
+            "updated_at": "2026-01-08T21:55:42.322557+07:00"
+          },
+          "category_id": 2,
+          "created_at": "2026-01-13T02:20:25.211149+07:00",
+          "created_by": 1,
+          "description": "Clean, responsive, and customizable admin dashboard template built with Vue 3 and Tailwind CSS.",
+          "downloads_count": 0,
+          "features": "[\"Dark Mode Support\", \"Responsive Layout\", \"Chart.js Integration\", \"Form Components\"]",
+          "id": 4,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 250000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "modern-admin-dashboard",
+          "tech_stack": "[\"Vue 3\", \"Tailwind CSS\", \"Vite\"]",
+          "title": "Modern Admin Dashboard UI",
+          "type": "template",
+          "updated_at": "2026-01-13T02:20:25.211149+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.325061+07:00",
+            "description": "Flutter, React Native, and native apps",
+            "icon": "smartphone",
+            "id": 3,
+            "is_active": true,
+            "name": "Mobile Apps",
+            "order": 3,
+            "slug": "mobile-apps",
+            "updated_at": "2026-01-08T21:55:42.325061+07:00"
+          },
+          "category_id": 3,
+          "created_at": "2026-01-13T02:20:25.210572+07:00",
+          "created_by": 1,
+          "description": "Uber Eats clone made with Flutter. Beautiful animations, real-time tracking, and vendor dashboard included. Works on both iOS and Android.",
+          "downloads_count": 0,
+          "features": "[\"Real-time Tracking\", \"Push Notifications\", \"Vendor App\", \"Dark Mode\"]",
+          "id": 3,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "flutter-delivery-app",
+          "tech_stack": "[\"Flutter\", \"Firebase\", \"Google Maps API\"]",
+          "title": "Flutter Delivery App",
+          "type": "mobile_apps",
+          "updated_at": "2026-01-13T02:20:25.210572+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.20936+07:00",
+          "created_by": 1,
+          "description": "Launch your SaaS in days with this comprehensive Next.js boilerplate. Includes Stripe integration, Authentication, Database setup with Prisma, and tailwind UI components.",
+          "downloads_count": 0,
+          "features": "[\"Authentication\", \"Subscription Payments\", \"Admin Dashboard\", \"SEO Optimized\"]",
+          "id": 2,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1618477247222-ac591245363d?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 750000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "nextjs-saas-boilerplate",
+          "tech_stack": "[\"Next.js\", \"TypeScript\", \"Tailwind CSS\", \"Prisma\", \"Stripe\"]",
+          "title": "NextJS SaaS Boilerplate",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.20936+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.197105+07:00",
+          "created_by": 1,
+          "description": "A complete microservices-based e-commerce backend written in Go (Golang). Includes services for products, orders, users, and payments. Features gRPC communication, Kafka event bus, and Docker compose setup.",
+          "downloads_count": 0,
+          "features": "[\"Microservices Architecture\", \"gRPC Communication\", \"Event-Driven\", \"Scalable\"]",
+          "id": 1,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\", \"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 1500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "ecommerce-microservices-go",
+          "tech_stack": "[\"Golang\", \"gRPC\", \"Kafka\", \"PostgreSQL\", \"Docker\"]",
+          "title": "E-Commerce Microservices Go",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.197105+07:00",
+          "views_count": 0
+        }
+      ],
+      "total": 5
+    },
+    "message": "Products retrieved successfully",
+    "success": true
+  },
+  "duration": "23.8527ms",
+  "duration_ms": 23,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:42:08",
+  "method": "GET",
+  "path": "/api/v1/products",
+  "query": {
+    "limit": "6"
+  },
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "limit": 6,
+      "page": 1,
+      "products": [
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.326209+07:00",
+            "description": "Python, PHP, and JS utility scripts",
+            "icon": "terminal",
+            "id": 4,
+            "is_active": true,
+            "name": "Scripts",
+            "order": 4,
+            "slug": "scripts",
+            "updated_at": "2026-01-08T21:55:42.326209+07:00"
+          },
+          "category_id": 4,
+          "created_at": "2026-01-13T02:20:25.212431+07:00",
+          "created_by": 1,
+          "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+          "downloads_count": 0,
+          "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+          "id": 5,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 150000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "instagram-automation-bot",
+          "tech_stack": "[\"Python\", \"Selenium\"]",
+          "title": "Instagram Automation Bot",
+          "type": "scripts",
+          "updated_at": "2026-01-13T02:20:25.212431+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.322557+07:00",
+            "description": "UI kits and website templates",
+            "icon": "layout",
+            "id": 2,
+            "is_active": true,
+            "name": "Templates",
+            "order": 2,
+            "slug": "templates",
+            "updated_at": "2026-01-08T21:55:42.322557+07:00"
+          },
+          "category_id": 2,
+          "created_at": "2026-01-13T02:20:25.211149+07:00",
+          "created_by": 1,
+          "description": "Clean, responsive, and customizable admin dashboard template built with Vue 3 and Tailwind CSS.",
+          "downloads_count": 0,
+          "features": "[\"Dark Mode Support\", \"Responsive Layout\", \"Chart.js Integration\", \"Form Components\"]",
+          "id": 4,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 250000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "modern-admin-dashboard",
+          "tech_stack": "[\"Vue 3\", \"Tailwind CSS\", \"Vite\"]",
+          "title": "Modern Admin Dashboard UI",
+          "type": "template",
+          "updated_at": "2026-01-13T02:20:25.211149+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.325061+07:00",
+            "description": "Flutter, React Native, and native apps",
+            "icon": "smartphone",
+            "id": 3,
+            "is_active": true,
+            "name": "Mobile Apps",
+            "order": 3,
+            "slug": "mobile-apps",
+            "updated_at": "2026-01-08T21:55:42.325061+07:00"
+          },
+          "category_id": 3,
+          "created_at": "2026-01-13T02:20:25.210572+07:00",
+          "created_by": 1,
+          "description": "Uber Eats clone made with Flutter. Beautiful animations, real-time tracking, and vendor dashboard included. Works on both iOS and Android.",
+          "downloads_count": 0,
+          "features": "[\"Real-time Tracking\", \"Push Notifications\", \"Vendor App\", \"Dark Mode\"]",
+          "id": 3,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "flutter-delivery-app",
+          "tech_stack": "[\"Flutter\", \"Firebase\", \"Google Maps API\"]",
+          "title": "Flutter Delivery App",
+          "type": "mobile_apps",
+          "updated_at": "2026-01-13T02:20:25.210572+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.20936+07:00",
+          "created_by": 1,
+          "description": "Launch your SaaS in days with this comprehensive Next.js boilerplate. Includes Stripe integration, Authentication, Database setup with Prisma, and tailwind UI components.",
+          "downloads_count": 0,
+          "features": "[\"Authentication\", \"Subscription Payments\", \"Admin Dashboard\", \"SEO Optimized\"]",
+          "id": 2,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1618477247222-ac591245363d?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 750000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "nextjs-saas-boilerplate",
+          "tech_stack": "[\"Next.js\", \"TypeScript\", \"Tailwind CSS\", \"Prisma\", \"Stripe\"]",
+          "title": "NextJS SaaS Boilerplate",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.20936+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.197105+07:00",
+          "created_by": 1,
+          "description": "A complete microservices-based e-commerce backend written in Go (Golang). Includes services for products, orders, users, and payments. Features gRPC communication, Kafka event bus, and Docker compose setup.",
+          "downloads_count": 0,
+          "features": "[\"Microservices Architecture\", \"gRPC Communication\", \"Event-Driven\", \"Scalable\"]",
+          "id": 1,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\", \"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 1500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "ecommerce-microservices-go",
+          "tech_stack": "[\"Golang\", \"gRPC\", \"Kafka\", \"PostgreSQL\", \"Docker\"]",
+          "title": "E-Commerce Microservices Go",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.197105+07:00",
+          "views_count": 0
+        }
+      ],
+      "total": 5
+    },
+    "message": "Products retrieved successfully",
+    "success": true
+  },
+  "duration": "3.2714ms",
+  "duration_ms": 3,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:42:23",
+  "method": "OPTIONS",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "0s",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:42:23",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@gmail.com",
+    "password": "password"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "9.0141ms",
+  "duration_ms": 9,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:42:48",
+  "method": "OPTIONS",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "0s",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:42:48",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "password123"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "54.8608ms",
+  "duration_ms": 54,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:19",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTc2ODc1MTExOSwiaWF0IjoxNzY4NjY0NzE5fQ.8mtg1s3NwJSrJedQGSlaAxpHEvfnKMgXormMQjW843M",
+      "user": {
+        "created_at": "2026-01-13T02:10:57.593232+07:00",
+        "email": "test@example.com",
+        "id": 3,
+        "is_verified": false,
+        "name": "Test User",
+        "provider": "local",
+        "role": "user"
+      }
+    },
+    "message": "Login successful",
+    "success": true
+  },
+  "duration": "56.2511ms",
+  "duration_ms": 56,
+  "client_ip": "::1",
+  "user_agent": "curl/8.15.0"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:56",
+  "method": "OPTIONS",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "503µs",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:56",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTc2ODc1MTE1NiwiaWF0IjoxNzY4NjY0NzU2fQ.g3mxiQm_b3DIkyQHegxiCpa62FLjs9kd-C1qRkK44-M",
+      "user": {
+        "created_at": "2026-01-13T02:10:57.593232+07:00",
+        "email": "test@example.com",
+        "id": 3,
+        "is_verified": false,
+        "name": "Test User",
+        "provider": "local",
+        "role": "user"
+      }
+    },
+    "message": "Login successful",
+    "success": true
+  },
+  "duration": "54.8531ms",
+  "duration_ms": 54,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:56",
+  "method": "OPTIONS",
+  "path": "/api/v1/cart",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "0s",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:56",
+  "method": "OPTIONS",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "0s",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:56",
+  "method": "GET",
+  "path": "/api/v1/cart",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...44-M",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "items": [],
+      "total": 0
+    },
+    "message": "Cart retrieved successfully",
+    "success": true
+  },
+  "duration": "7.0582ms",
+  "duration_ms": 7,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 3,
+  "user_email": "test@example.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:56",
+  "method": "OPTIONS",
+  "path": "/api/v1/wishlist",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "0s",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:56",
+  "method": "GET",
+  "path": "/api/v1/notifications/unread",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...44-M",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "count": 0,
+      "notifications": []
+    },
+    "message": "Unread notifications berhasil diambil",
+    "success": true
+  },
+  "duration": "10.8134ms",
+  "duration_ms": 10,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 3,
+  "user_email": "test@example.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:56",
+  "method": "GET",
+  "path": "/api/v1/cart",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...44-M",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "items": [],
+      "total": 0
+    },
+    "message": "Cart retrieved successfully",
+    "success": true
+  },
+  "duration": "51.9393ms",
+  "duration_ms": 51,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 3,
+  "user_email": "test@example.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:56",
+  "method": "GET",
+  "path": "/api/v1/wishlist",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...44-M",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": [],
+    "message": "Wishlist retrieved successfully",
+    "success": true
+  },
+  "duration": "50.281ms",
+  "duration_ms": 50,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 3,
+  "user_email": "test@example.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:56",
+  "method": "GET",
+  "path": "/api/v1/wishlist",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...44-M",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": [],
+    "message": "Wishlist retrieved successfully",
+    "success": true
+  },
+  "duration": "527.2µs",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "user_id": 3,
+  "user_email": "test@example.com"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:56",
+  "method": "OPTIONS",
+  "path": "/api/v1/products",
+  "query": {
+    "limit": "6"
+  },
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "0s",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:45:56",
+  "method": "GET",
+  "path": "/api/v1/products",
+  "query": {
+    "limit": "6"
+  },
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "Bearer ...44-M",
+    "Content-Type": ""
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "limit": 6,
+      "page": 1,
+      "products": [
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.326209+07:00",
+            "description": "Python, PHP, and JS utility scripts",
+            "icon": "terminal",
+            "id": 4,
+            "is_active": true,
+            "name": "Scripts",
+            "order": 4,
+            "slug": "scripts",
+            "updated_at": "2026-01-08T21:55:42.326209+07:00"
+          },
+          "category_id": 4,
+          "created_at": "2026-01-13T02:20:25.212431+07:00",
+          "created_by": 1,
+          "description": "Python script to automate likes, follows, and comments. Includes safety limits to prevent account bans.",
+          "downloads_count": 0,
+          "features": "[\"Auto Like\", \"Auto Follow\", \"Targeting by Hashtag\"]",
+          "id": 5,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 150000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "instagram-automation-bot",
+          "tech_stack": "[\"Python\", \"Selenium\"]",
+          "title": "Instagram Automation Bot",
+          "type": "scripts",
+          "updated_at": "2026-01-13T02:20:25.212431+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.322557+07:00",
+            "description": "UI kits and website templates",
+            "icon": "layout",
+            "id": 2,
+            "is_active": true,
+            "name": "Templates",
+            "order": 2,
+            "slug": "templates",
+            "updated_at": "2026-01-08T21:55:42.322557+07:00"
+          },
+          "category_id": 2,
+          "created_at": "2026-01-13T02:20:25.211149+07:00",
+          "created_by": 1,
+          "description": "Clean, responsive, and customizable admin dashboard template built with Vue 3 and Tailwind CSS.",
+          "downloads_count": 0,
+          "features": "[\"Dark Mode Support\", \"Responsive Layout\", \"Chart.js Integration\", \"Form Components\"]",
+          "id": 4,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 250000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "modern-admin-dashboard",
+          "tech_stack": "[\"Vue 3\", \"Tailwind CSS\", \"Vite\"]",
+          "title": "Modern Admin Dashboard UI",
+          "type": "template",
+          "updated_at": "2026-01-13T02:20:25.211149+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.325061+07:00",
+            "description": "Flutter, React Native, and native apps",
+            "icon": "smartphone",
+            "id": 3,
+            "is_active": true,
+            "name": "Mobile Apps",
+            "order": 3,
+            "slug": "mobile-apps",
+            "updated_at": "2026-01-08T21:55:42.325061+07:00"
+          },
+          "category_id": 3,
+          "created_at": "2026-01-13T02:20:25.210572+07:00",
+          "created_by": 1,
+          "description": "Uber Eats clone made with Flutter. Beautiful animations, real-time tracking, and vendor dashboard included. Works on both iOS and Android.",
+          "downloads_count": 0,
+          "features": "[\"Real-time Tracking\", \"Push Notifications\", \"Vendor App\", \"Dark Mode\"]",
+          "id": 3,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "flutter-delivery-app",
+          "tech_stack": "[\"Flutter\", \"Firebase\", \"Google Maps API\"]",
+          "title": "Flutter Delivery App",
+          "type": "mobile_apps",
+          "updated_at": "2026-01-13T02:20:25.210572+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.20936+07:00",
+          "created_by": 1,
+          "description": "Launch your SaaS in days with this comprehensive Next.js boilerplate. Includes Stripe integration, Authentication, Database setup with Prisma, and tailwind UI components.",
+          "downloads_count": 0,
+          "features": "[\"Authentication\", \"Subscription Payments\", \"Admin Dashboard\", \"SEO Optimized\"]",
+          "id": 2,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1618477247222-ac591245363d?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 750000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "nextjs-saas-boilerplate",
+          "tech_stack": "[\"Next.js\", \"TypeScript\", \"Tailwind CSS\", \"Prisma\", \"Stripe\"]",
+          "title": "NextJS SaaS Boilerplate",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.20936+07:00",
+          "views_count": 0
+        },
+        {
+          "category": {
+            "created_at": "2026-01-08T21:55:42.314623+07:00",
+            "description": "Full application source codes",
+            "icon": "code",
+            "id": 1,
+            "is_active": true,
+            "name": "Source Code",
+            "order": 1,
+            "slug": "source-code",
+            "updated_at": "2026-01-08T21:55:42.314623+07:00"
+          },
+          "category_id": 1,
+          "created_at": "2026-01-13T02:20:25.197105+07:00",
+          "created_by": 1,
+          "description": "A complete microservices-based e-commerce backend written in Go (Golang). Includes services for products, orders, users, and payments. Features gRPC communication, Kafka event bus, and Docker compose setup.",
+          "downloads_count": 0,
+          "features": "[\"Microservices Architecture\", \"gRPC Communication\", \"Event-Driven\", \"Scalable\"]",
+          "id": 1,
+          "is_active": true,
+          "preview_images": "[\"https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\", \"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format\u0026fit=crop\u0026q=80\u0026w=1000\"]",
+          "price": 1500000,
+          "rating_average": 0,
+          "requirements": "[]",
+          "slug": "ecommerce-microservices-go",
+          "tech_stack": "[\"Golang\", \"gRPC\", \"Kafka\", \"PostgreSQL\", \"Docker\"]",
+          "title": "E-Commerce Microservices Go",
+          "type": "source_code",
+          "updated_at": "2026-01-13T02:20:25.197105+07:00",
+          "views_count": 0
+        }
+      ],
+      "total": 5
+    },
+    "message": "Products retrieved successfully",
+    "success": true
+  },
+  "duration": "6.0827ms",
+  "duration_ms": 6,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:47:16",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTc2ODc1MTIzNiwiaWF0IjoxNzY4NjY0ODM2fQ.KobErWbm2TiSr_pgXBIaCW-994uElqhVK3yRYcSvkz4",
+      "user": {
+        "created_at": "2026-01-13T02:10:57.593232+07:00",
+        "email": "test@example.com",
+        "id": 3,
+        "is_verified": false,
+        "name": "Test User",
+        "provider": "local",
+        "role": "user"
+      }
+    },
+    "message": "Login successful",
+    "success": true
+  },
+  "duration": "57.0384ms",
+  "duration_ms": 57,
+  "client_ip": "::1",
+  "user_agent": "curl/8.15.0"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:47:39",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "test@example.com",
+    "password": "password123"
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTc2ODc1MTI1OSwiaWF0IjoxNzY4NjY0ODU5fQ.QA_yU3bNyd2PLrhVAe5FnmOs5MBFTLB52mrexRcVdSI",
+      "user": {
+        "created_at": "2026-01-13T02:10:57.593232+07:00",
+        "email": "test@example.com",
+        "id": 3,
+        "is_verified": false,
+        "name": "Test User",
+        "provider": "local",
+        "role": "user"
+      }
+    },
+    "message": "Login successful",
+    "success": true
+  },
+  "duration": "49.6738ms",
+  "duration_ms": 49,
+  "client_ip": "::1",
+  "user_agent": "curl/8.15.0"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:48:11",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "admin123"
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImFkbWluQGNvZGluZ2luLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzY4NzUxMjkxLCJpYXQiOjE3Njg2NjQ4OTF9.8Gff_ICR0iH39oZxeaS_O1HHGOasrGlyUn0SDfyCANw",
+      "user": {
+        "created_at": "2025-12-21T11:39:43.601272+07:00",
+        "email": "admin@codingin.com",
+        "id": 1,
+        "is_verified": false,
+        "name": "Admin User",
+        "provider": "local",
+        "role": "user"
+      }
+    },
+    "message": "Login successful",
+    "success": true
+  },
+  "duration": "51.1951ms",
+  "duration_ms": 51,
+  "client_ip": "::1",
+  "user_agent": "curl/8.15.0"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:56:02",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "admin123"
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImFkbWluQGNvZGluZ2luLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc2ODc1MTc2MiwiaWF0IjoxNzY4NjY1MzYyfQ.wCiWy3mj82BhLGCotJlAiGG6TZnN_pcyAY5ydjCPSII",
+      "user": {
+        "created_at": "2025-12-21T11:39:43.601272+07:00",
+        "email": "admin@codingin.com",
+        "id": 1,
+        "is_verified": false,
+        "name": "Admin User",
+        "provider": "local",
+        "role": "admin"
+      }
+    },
+    "message": "Login successful",
+    "success": true
+  },
+  "duration": "52.2772ms",
+  "duration_ms": 52,
+  "client_ip": "::1",
+  "user_agent": "curl/8.15.0"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:56:27",
+  "method": "OPTIONS",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "0s",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:56:27",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "passwordd123"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "51.7402ms",
+  "duration_ms": 51,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:56:43",
+  "method": "OPTIONS",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "0s",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 22:56:43",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "password123"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "51.9243ms",
+  "duration_ms": 51,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:14:17",
+  "method": "OPTIONS",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "5.0584ms",
+  "duration_ms": 5,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:14:17",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "password123"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "69.0221ms",
+  "duration_ms": 69,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:15:56",
+  "method": "OPTIONS",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "1.0301ms",
+  "duration_ms": 1,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:15:56",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "password123"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "51.7392ms",
+  "duration_ms": 51,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:20:18",
+  "method": "OPTIONS",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "502.9µs",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:20:18",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "password"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "55.4967ms",
+  "duration_ms": 55,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:21:56",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "codingin@gmail.com",
+    "password": "password123"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "3.4396ms",
+  "duration_ms": 3,
+  "client_ip": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:22:11",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "password123"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "51.1674ms",
+  "duration_ms": 51,
+  "client_ip": "127.0.0.1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:22:32",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "admin123"
+  },
+  "status_code": 200,
+  "response_body": {
+    "data": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImFkbWluQGNvZGluZ2luLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc2ODc1MzM1MiwiaWF0IjoxNzY4NjY2OTUyfQ.A3r4gbkovk4YMy3KFAEg7VOUjt1eXMHQiZbs1eQyKB4",
+      "user": {
+        "created_at": "2025-12-21T11:39:43.601272+07:00",
+        "email": "admin@codingin.com",
+        "id": 1,
+        "is_verified": false,
+        "name": "Admin User",
+        "provider": "local",
+        "role": "admin"
+      }
+    },
+    "message": "Login successful",
+    "success": true
+  },
+  "duration": "54.5781ms",
+  "duration_ms": 54,
+  "client_ip": "::1",
+  "user_agent": "curl/8.15.0"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:49:11",
+  "method": "OPTIONS",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "503.6µs",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:49:11",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "password123"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "54.2743ms",
+  "duration_ms": 54,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:49:58",
+  "method": "OPTIONS",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "*/*",
+    "Authorization": "",
+    "Content-Type": ""
+  },
+  "status_code": 204,
+  "duration": "0s",
+  "duration_ms": 0,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:49:58",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "password123"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "53.1439ms",
+  "duration_ms": 53,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================
+
+{
+  "timestamp": "2026-01-17 23:57:18",
+  "method": "POST",
+  "path": "/api/v1/auth/login",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Authorization": "",
+    "Content-Type": "application/json"
+  },
+  "request_body": {
+    "email": "admin@codingin.com",
+    "password": "password123"
+  },
+  "status_code": 401,
+  "response_body": {
+    "message": "invalid email or password",
+    "success": false
+  },
+  "duration": "53.364ms",
+  "duration_ms": 53,
+  "client_ip": "::1",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+}
+========================================

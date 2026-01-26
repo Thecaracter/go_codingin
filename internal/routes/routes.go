@@ -27,9 +27,21 @@ func SetupRoutes(
 	analyticsHandler *handlers.AnalyticsHandler,
 	apiLogRepo repositories.APILogRepository,
 ) {
+	// ========================================
 	// Global Middleware
+	// ========================================
+	r.Use(middleware.CORS()) // CORS HARUS PALING ATAS
+
+	// ========================================
+	// API LOGGER MIDDLEWARE
+	// ========================================
+	// Middleware ini akan log semua request & response
+	// ke file logs/api_YYYY-MM-DD.log
+	r.Use(middleware.APILoggerMiddleware())
+
 	r.Use(middleware.Logger())
-	r.Use(middleware.CORS())
+	// r.Use(middleware.CORS()) // Moved up
+	r.Use(middleware.ErrorHandler())
 	r.Use(middleware.ErrorHandler())
 	r.Use(gin.Recovery())
 
@@ -37,10 +49,12 @@ func SetupRoutes(
 	rateLimiter := middleware.NewRateLimiter(100, time.Minute)
 	r.Use(rateLimiter.Middleware())
 
-	// API Monitor
+	// API Monitor (Optional - bisa dicomment karena sudah ada APILogger)
 	r.Use(middleware.APIMonitorMiddleware(apiLogRepo))
 
+	// ========================================
 	// Health check
+	// ========================================
 	r.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"status":  "ok",
@@ -48,7 +62,9 @@ func SetupRoutes(
 		})
 	})
 
+	// ========================================
 	// API v1 routes
+	// ========================================
 	v1 := r.Group("/api/v1")
 	{
 		// Authentication routes (public)
@@ -220,6 +236,8 @@ func SetupRoutes(
 		}
 	}
 
+	// ========================================
 	// Serve uploaded files
+	// ========================================
 	r.Static("/uploads", "./uploads")
 }

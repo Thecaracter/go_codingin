@@ -1,11 +1,14 @@
 package handlers
 
 import (
+	"encoding/json"
+	"fmt"
 	"gin-quickstart/internal/config"
 	"gin-quickstart/internal/models"
 	"gin-quickstart/internal/services"
 	"gin-quickstart/pkg/utils"
 	"net/http"
+	"net/url"
 
 	"github.com/gin-gonic/gin"
 	"golang.org/x/oauth2"
@@ -85,7 +88,6 @@ func (h *AuthHandler) GoogleLogin(c *gin.Context) {
 	}
 
 	config := utils.GetGoogleOAuthConfig(oauthConfig)
-
 	url := config.AuthCodeURL("state")
 
 	c.Redirect(http.StatusTemporaryRedirect, url)
@@ -101,17 +103,43 @@ func (h *AuthHandler) GoogleLogin(c *gin.Context) {
 func (h *AuthHandler) GoogleCallback(c *gin.Context) {
 	code := c.Query("code")
 	if code == "" {
-		utils.ErrorResponse(c, http.StatusBadRequest, "Authorization code required")
+		// Redirect to frontend with error
+		errorURL := fmt.Sprintf("%s/login?error=%s",
+			h.config.FrontendURL,
+			url.QueryEscape("Authorization code required"))
+		c.Redirect(http.StatusTemporaryRedirect, errorURL)
 		return
 	}
 
 	authResp, err := h.service.GoogleOAuth(code)
 	if err != nil {
-		utils.ErrorResponse(c, http.StatusBadRequest, err.Error())
+		// Redirect to frontend with error
+		errorURL := fmt.Sprintf("%s/login?error=%s",
+			h.config.FrontendURL,
+			url.QueryEscape(err.Error()))
+		c.Redirect(http.StatusTemporaryRedirect, errorURL)
 		return
 	}
 
-	utils.SuccessResponse(c, http.StatusOK, "Google login successful", authResp)
+	// Serialize user data to JSON
+	userJSON, err := json.Marshal(authResp.User)
+	if err != nil {
+		errorURL := fmt.Sprintf("%s/login?error=%s",
+			h.config.FrontendURL,
+			url.QueryEscape("Failed to process user data"))
+		c.Redirect(http.StatusTemporaryRedirect, errorURL)
+		return
+	}
+
+	// Redirect to frontend callback with token and user data
+	callbackURL := fmt.Sprintf(
+		"%s/auth/callback?token=%s&user=%s",
+		h.config.FrontendURL,
+		authResp.Token,
+		url.QueryEscape(string(userJSON)),
+	)
+
+	c.Redirect(http.StatusTemporaryRedirect, callbackURL)
 }
 
 // GithubLogin godoc
@@ -130,9 +158,8 @@ func (h *AuthHandler) GithubLogin(c *gin.Context) {
 	config := utils.GetGithubOAuthConfig(oauthConfig)
 	url := config.AuthCodeURL("state", oauth2.SetAuthURLParam("response_type", "code"))
 
-	c.JSON(http.StatusOK, gin.H{
-		"auth_url": url,
-	})
+	// Redirect directly to GitHub (not return JSON)
+	c.Redirect(http.StatusTemporaryRedirect, url)
 }
 
 // GithubCallback godoc
@@ -145,15 +172,39 @@ func (h *AuthHandler) GithubLogin(c *gin.Context) {
 func (h *AuthHandler) GithubCallback(c *gin.Context) {
 	code := c.Query("code")
 	if code == "" {
-		utils.ErrorResponse(c, http.StatusBadRequest, "Authorization code required")
+		errorURL := fmt.Sprintf("%s/login?error=%s",
+			h.config.FrontendURL,
+			url.QueryEscape("Authorization code required"))
+		c.Redirect(http.StatusTemporaryRedirect, errorURL)
 		return
 	}
 
 	authResp, err := h.service.GithubOAuth(code)
 	if err != nil {
-		utils.ErrorResponse(c, http.StatusBadRequest, err.Error())
+		errorURL := fmt.Sprintf("%s/login?error=%s",
+			h.config.FrontendURL,
+			url.QueryEscape(err.Error()))
+		c.Redirect(http.StatusTemporaryRedirect, errorURL)
 		return
 	}
 
-	utils.SuccessResponse(c, http.StatusOK, "GitHub login successful", authResp)
+	// Serialize user data to JSON
+	userJSON, err := json.Marshal(authResp.User)
+	if err != nil {
+		errorURL := fmt.Sprintf("%s/login?error=%s",
+			h.config.FrontendURL,
+			url.QueryEscape("Failed to process user data"))
+		c.Redirect(http.StatusTemporaryRedirect, errorURL)
+		return
+	}
+
+	// Redirect to frontend callback
+	callbackURL := fmt.Sprintf(
+		"%s/auth/callback?token=%s&user=%s",
+		h.config.FrontendURL,
+		authResp.Token,
+		url.QueryEscape(string(userJSON)),
+	)
+
+	c.Redirect(http.StatusTemporaryRedirect, callbackURL)
 }

@@ -19,6 +19,9 @@ type Config struct {
 	DBName     string
 	JWTSecret  string
 
+	// Frontend
+	FrontendURL string // ← TAMBAHKAN INI
+
 	// OAuth
 	GoogleClientID     string
 	GoogleClientSecret string
@@ -50,6 +53,9 @@ func LoadConfig() *Config {
 		DBPassword: getEnv("DB_PASSWORD", "postgres"),
 		DBName:     getEnv("DB_NAME", "gin_db"),
 		JWTSecret:  getEnv("JWT_SECRET", "secret"),
+
+		// Frontend
+		FrontendURL: getEnv("FRONTEND_URL", "http://localhost:3000"), // ← TAMBAHKAN INI
 
 		// OAuth
 		GoogleClientID:     getEnv("GOOGLE_CLIENT_ID", ""),
